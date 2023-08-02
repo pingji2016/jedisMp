@@ -45,7 +45,7 @@ public class RACacheNode<K, V> {
         };
     }
 
-    public RACacheNode(List<TransactionEntry<K, V>> transactionEntryList, RAparallelExecutor executor, ConnectionProvider provider, Duration dealtTime) {
+    public RACacheNode(List<TransactionEntry<K, V>> transactionEntryList, RAparallelExecutorr executor, ConnectionProvider provider, Duration dealtTime) {
         this.transactionEntryList = transactionEntryList;
         this.executor = executor;
         this.provider = provider;
