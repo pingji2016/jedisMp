@@ -50,12 +50,12 @@ public class RACacheNode<K, V> {
         this.executor = executor;
         this.provider = provider;
         this.dealtTime = dealtTime;
-    }nEntry<K, V> entry) {
+    }
+
+    public void initData(TransactionEntry<K, V> entry) {
         transactionEntryList.add(entry);
     }
 
-
-    public void initData(Transactio
     public void refreshData() {
         for (TransactionEntry<K, V> item : transactionEntryList) {
             if (Long.parseLong((String) item.getKey()) > timestamp) {
